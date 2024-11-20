@@ -12,7 +12,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = CustomUser
-        fields = ('username', 'email', 'weight', 'height', 'gender', 'birth_date')
+        fields = ('username', 'email', 'weight', 'height', 'gender', 'birthdate')
 
 
     def save(self, commit=True):
@@ -20,7 +20,7 @@ class CustomUserCreationForm(UserCreationForm):
         user.weight = self.cleaned_data.get('weight')
         user.height = self.cleaned_data.get('height')
         user.gender = self.cleaned_data.get('gender')
-        user.birth_date = self.cleaned_data.get('birth_date')
+        user.birthdate = self.cleaned_data.get('birthdate')
         if commit:
             user.save()
         return user
