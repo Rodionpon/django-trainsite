@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Регистрация{% endblock %}
+    
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}"></link>
+{% endblock %}
 
 
 {% block content %}
-<h2>Регистрация</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-</form>
-{% endblock %}
+<section class="signup">
+    <form method="post">
+        <h2>Регистрация</h2>
+        {% csrf_token %}
+        {{ form.as_table }}
+        <button>Зарегестрироваться</button>
+    </form>
+</section>
+{% endblock %}  

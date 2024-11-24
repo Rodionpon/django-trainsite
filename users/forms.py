@@ -4,6 +4,12 @@ from .models import CustomUser
 
 
 class CustomUserCreationForm(UserCreationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs.update({
+                'placeholder': field.label
+            })
     weight = forms.FloatField(required=True, label="Вес (кг)")
     height = forms.FloatField(required=True, label="Рост (см)")
     gender = forms.ChoiceField(choices=[("male", "Мужской"),("female", "Женский")],required=True, label="Пол" )

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Rubik+Mono+One&family=Unbounded:wght@200..900&display=swap');
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(156, 133, 242, 1);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: "Unbounded", sans-serif;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+body{
+    margin: 0;
+    background-color:rgba(38, 38, 38, 1) ;
+}
+h1{
+    margin-left: 50px;
+}
+/* Color Theme Swatches in RGBA */
+.Графический-дизайн-1-rgba { color: rgba(156, 133, 242, 1); }
+.Графический-дизайн-2-rgba { color: rgba(242, 226, 4, 1); }
+.Графический-дизайн-3-rgba { color: rgb(242, 183, 4); }
+.Графический-дизайн-4-rgba { color: rgba(242, 79, 79, 1); }
+.Графический-дизайн-5-rgba { color: rgba(38, 38, 38, 1);}
