@@ -7,8 +7,10 @@ from .models import CustomUser
 class SignupView(FormView):
     template_name = 'signup.html'
     form_class = CustomUserCreationForm
+    success_url = reverse_lazy("main:dashboard")
 
     def form_valid(self, form):
         user = form.save()
         login(self.request, user)
         return super().form_valid(form)
+    
