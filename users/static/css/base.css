@@ -17,6 +17,10 @@ body{
 h1{
     margin-left: 50px;
 }
+img{
+    width: 50px;
+    height: 50px;
+}
 /* Color Theme Swatches in RGBA */
 .Графический-дизайн-1-rgba { color: rgba(156, 133, 242, 1); }
 .Графический-дизайн-2-rgba { color: rgba(242, 226, 4, 1); }
