@@ -5,10 +5,12 @@ header{
     height: 100px;
     background-color: rgba(156, 133, 242, 1);
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     font-family: "Unbounded", sans-serif;
     box-shadow: 0 0 5px rgb(255, 255, 255);
+    flex-direction: row;
+   
 }
 body{
     margin: 0;
@@ -17,9 +19,10 @@ body{
 h1{
     margin-left: 50px;
 }
-img{
+.account-icon>img{
     width: 50px;
     height: 50px;
+    margin-right: 50px;
 }
 /* Color Theme Swatches in RGBA */
 .Графический-дизайн-1-rgba { color: rgba(156, 133, 242, 1); }

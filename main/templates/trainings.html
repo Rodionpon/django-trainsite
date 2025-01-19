@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Тренировки{% endblock %}
+    
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/trainings.css' %}"></link>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}"></link>
+{% endblock %}
+
+
+{% block content %}
+<section class="main">
+    {% include "menu.html" %}
+    <div class="training-cards">
+        {% for training in trainings %}
+            <div class ="training-card">
+                <h3>{{ training.title }}</h3>
+                <p>{{ training.description }}</p>
+            </div>
+        {% empty %}
+            <p>У вас пока нет тренировок.</p>
+        {% endfor %}
+        </div>
+    <button>Создать тренировку</button>
+</section>
+{% endblock %}  
